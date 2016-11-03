@@ -4,6 +4,7 @@
   "description": "mBot",
   "main": "server.js",
   "dependencies": {
+    "apiai": "^3.0.2",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.15",

@@ -5,6 +5,8 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
+var apiai = require('apiai');
+var app = apiai("6d88c37356c947429cfe97a91dec8bf7");
 app.set('port', (process.env.PORT || 5000))
 // Process application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
@@ -28,6 +30,16 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
+            var request = app.textRequest(text);
+            request.on('response', function(response) {
+                console.log(response);
+            });
+
+            request.on('error', function(error) {
+                console.log(error);
+            });
+
+            request.end();
             sendTextMessage(sender, "Text received, echo: " + JSON.stringify(req.body))
         }
     }
