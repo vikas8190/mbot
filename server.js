@@ -45,7 +45,7 @@ app.post('/webhook/', function (req, res) {
     }
     res.sendStatus(200)
 })
-var token = "EAAXNSn977yoBAAz62l0C8mTv01p4wkNAqjZCPBwltCbjZBZB2QRZA7CRDsI13pZCEK8hKkJaw1gXZAb9iV2qw8aKbTMbcyY2aZCNZC0aCV1IDzA0hlM7m40TxOk2jAQ17S1PTzBhBLiYp7oPbFxxXwhEw3c7lRqaUZAMwrZAUFMtWSZCQZDZD"
+var token = "EAAQH8AiEQIwBAKlZCyi1Wuh8kSPMeLYYRLXzoJlpYa4yeK1umWiDvys6hHTChnZBbBGAKJY77Afz4ow8f25UofISE8ZBg3m2XrEZAIuwzeT1knS4RzjKpdNbqUM7TjUtwXNkBcAHgglnKCv02wojyNbQwnWC9GI8dEA8xoIltQZDZD"
 function sendTextMessage(sender, text) {
     messageData = {
         text:text
